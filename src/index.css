@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Aquí puedes agregar tus variables de tema si las necesitas luego */
+}
+
+/* El reseteo global ya lo hace Tailwind por defecto con Preflight, 
+pero si quieres ser extra específico: */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+  }
+}
