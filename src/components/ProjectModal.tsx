@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import ImageCarousel from "../store/ImageCarousel";
 
 // Define esto fuera de tu componente para poder reutilizarlo
 interface Project {
     title: string;
-    image: string;
+    images: string[];
     process: string;
     longDescription: string;
     tech: string[];
@@ -18,29 +19,30 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
         >
             <motion.div
                 layoutId={project.title}
-                className="bg-zinc-900 border border-white/10 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8 relative"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-zinc-900 border border-white/10 rounded-3xl w-4xl max-h-[90vh] overflow-y-auto p-8 relative"
             >
                 {/* Botón Cerrar */}
-                <button 
-                    onClick={onClose} 
-                    className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors"
+                <button
+                    onClick={onClose}
+                    className="absolute top-6 right-6 text-zinc-500 cursor-pointer hover:text-white transition-colors"
                 >
                     ✕
                 </button>
 
                 {/* Imagen del Proyecto */}
-                <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-64 object-cover rounded-2xl mb-8" 
-                />
+                <div className="mb-8">
+                    <ImageCarousel images={project.images} />
+                </div>
 
                 <div className="grid md:grid-cols-3 gap-8 text-left">
                     <div className="md:col-span-2">
@@ -59,8 +61,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             <div className="flex flex-wrap gap-2">
                                 {/* 't' ahora se reconoce automáticamente como string gracias a la interfaz */}
                                 {project.tech.map((t) => (
-                                    <span 
-                                        key={t} 
+                                    <span
+                                        key={t}
                                         className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-zinc-400"
                                     >
                                         {t}
@@ -71,17 +73,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                         {/* Botones de Acción */}
                         <div className="flex flex-col gap-3 pt-4">
-                            <a 
-                                href={project.demo} 
-                                target="_blank" 
+                            <a
+                                href={project.demo}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-purple-600 text-white text-center py-3 rounded-xl font-bold hover:bg-purple-500 transition-colors"
                             >
                                 Ver Demo Live
                             </a>
-                            <a 
-                                href={project.github} 
-                                target="_blank" 
+                            <a
+                                href={project.github}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="border border-white/10 text-white text-center py-3 rounded-xl font-bold hover:bg-white/5 transition-colors"
                             >
