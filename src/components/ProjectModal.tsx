@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ImageCarousel from "../store/ImageCarousel";
+import { useEffect } from "react";
 
 // Define esto fuera de tu componente para poder reutilizarlo
 interface Project {
@@ -18,10 +19,30 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+
+    useEffect(() => {
+
+        // Evitamos el scroll del fondo mientras el modal está abierto.-
+        document.body.style.overflow = 'hidden';
+        
+        // Función para cerrar el modal al presionar "Esc".-
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+
+        return () => {
+            document.body.style.overflow = 'unset';
+            window.removeEventListener('keydown', handleEsc);
+        };
+
+    }, [onClose]);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
             className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
         >
             <motion.div
@@ -29,6 +50,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
+                onClick={e => e.stopPropagation()}
                 className="bg-zinc-900 border border-white/10 rounded-3xl w-4xl max-h-[90vh] overflow-y-auto p-8 relative"
             >
                 {/* Botón Cerrar */}

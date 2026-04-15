@@ -162,7 +162,7 @@ const Projects = () => {
                                     hover: { scale: 1.05, filter: "blur(2px)" }
                                 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain p-4"
                             />
 
                             {/* Overlay */}

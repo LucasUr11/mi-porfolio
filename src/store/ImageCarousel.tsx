@@ -25,7 +25,7 @@ export default function ImageCarousel({ images = [] }: { images?: string[] }) {
 
     return (
         <div className="space-y-4">
-            {/* Main image */}
+            
             <div className="relative aspect-video md:aspect-video rounded-2xl overflow-hidden bg-zinc-800 border border-white/5">
                 <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.img
@@ -38,7 +38,7 @@ export default function ImageCarousel({ images = [] }: { images?: string[] }) {
                         animate="center"
                         exit="exit"
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-contain p-4"
                     />
                 </AnimatePresence>
 
@@ -46,13 +46,13 @@ export default function ImageCarousel({ images = [] }: { images?: string[] }) {
                     <>
                         <button
                             onClick={() => navigate(-1)}
-                            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg cursor-pointer"
                         >
                             <ChevronLeft className="w-5 h-5 text-[#3a3a3a]" />
                         </button>
                         <button
                             onClick={() => navigate(1)}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg cursor-pointer"
                         >
                             <ChevronRight className="w-5 h-5 text-[#3a3a3a]" />
                         </button>
