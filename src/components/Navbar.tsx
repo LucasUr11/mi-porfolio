@@ -22,7 +22,7 @@ export default function Navbar() {
         { name: "Inicio", href: "/" },
         { name: "Proyectos", href: "/#projects" }, // Esto requiere un pequeño ajuste si quieres volver desde otra página
         { name: "Sobre mi", href: "/#about" },
-        { name: "Contacto", href: "/#contact" },
+        { name: "Contacto", href: "/contacto" },
     ];
 
     return (
