@@ -51,7 +51,7 @@ const projects: Project[] = [
         longDescription: "Una interfaz de usuario moderna para una tienda online, construida con React y Tailwind CSS.",
         process: "El proyecto se está desarrollando utilizando React para la estructura y Tailwind CSS para el diseño, con TypeScript para garantizar un código robusto y mantenible. El enfoque se centra en crear una experiencia de usuario fluida y atractiva, con animaciones suaves y un diseño responsivo que se adapta a todos los dispositivos.",
         github: "https://github.com/LucasUr11/Nexus-PC",
-        demo: "#",
+        demo: "https://nexus-pc-beryl.vercel.app/",
         images: [nexus1, nexus2, nexus3]
     },
     {
@@ -61,7 +61,7 @@ const projects: Project[] = [
         longDescription: "StockMaster es una aplicación de gestión de inventarios diseñada para pequeñas empresas. Permite a los usuarios rastrear sus productos, gestionar el stock y generar informes detallados sobre las ventas y el rendimiento del inventario. La aplicación se construyó utilizando React para la interfaz de usuario, TypeScript para garantizar un código seguro y mantenible, y Tailwind CSS para un diseño moderno y responsivo.",
         process: "El desarrollo de StockMaster se centró en crear una experiencia de usuario intuitiva y eficiente. Se implementaron características clave como la adición y edición de productos, la gestión de categorías, y la generación de informes personalizados. El proyecto se estructuró utilizando componentes reutilizables y un enfoque modular para facilitar futuras expansiones y mejoras.",
         github: "https://github.com/LucasUr11/Stock-Master",
-        demo: "#",
+        demo: "https://stock-master-omega.vercel.app/",
         images: [stockmaster1, stockmaster2, stockmaster3]
     },
     {
@@ -81,7 +81,7 @@ const projects: Project[] = [
         longDescription: "Una landing page profesional para un psicólogo, diseñada para resaltar sus servicios y experiencia. La página presenta una estructura clara y atractiva, con secciones dedicadas a la biografía del psicólogo, los servicios ofrecidos, y articulos relacionados con la psicología. El diseño se centra en transmitir confianza y profesionalismo, utilizando una paleta de colores calmada y tipografía legible.",
         process: "El desarrollo de esta landing page se llevó a cabo utilizando React para la estructura y Tailwind CSS para el diseño, con TypeScript para garantizar un código robusto y mantenible. El enfoque se centró en crear una experiencia de usuario fluida y atractiva, con animaciones suaves y un diseño responsivo que se adapta a todos los dispositivos.",
         github: "https://github.com/LucasUr11/proyecto-psicologo",
-        demo: "#",
+        demo: "https://proyecto-lucas-psicologo.vercel.app/",
         images: [psicologo1, psicologo2, psicologo3, psicologo4]
     },
     {
@@ -91,7 +91,7 @@ const projects: Project[] = [
         longDescription: "Una landing page profesional para un abogado, diseñada para resaltar sus servicios y experiencia. La página presenta una estructura clara y atractiva, con secciones dedicadas a la biografía del abogado, los servicios ofrecidos, y articulos relacionados con el derecho. El diseño se centra en transmitir confianza y profesionalismo, utilizando una paleta de colores calmada y tipografía legible.",
         process: "El desarrollo de esta landing page se llevó a cabo utilizando React para la estructura y Tailwind CSS para el diseño, con TypeScript para garantizar un código robusto y mantenible. El enfoque se centró en crear una experiencia de usuario fluida y atractiva, con animaciones suaves y un diseño responsivo que se adapta a todos los dispositivos.",
         github: "https://github.com/LucasUr11/Proyecto-Abogado",
-        demo: "#",
+        demo: "https://proyecto-lucas-abogado.vercel.app/",
         images: [abogado1, abogado2, abogado3, abogado4, abogado5]
     },
     {
@@ -101,7 +101,7 @@ const projects: Project[] = [
         longDescription: "Es una plataforma integral de gestión de contenidos diseñada para optimizar el flujo de trabajo de creadores. Permite centralizar todo el ciclo de vida de la producción audiovisual: desde la incubación de ideas y redacción de guiones hasta la planificación en calendario y el análisis de métricas.",
         process: "El desarrollo de C3 se llevó a cabo utilizando React para la estructura y Tailwind CSS para el diseño, con TypeScript para garantizar un código robusto y mantenible. El enfoque se centró en crear una experiencia de usuario fluida y atractiva, con animaciones suaves y un diseño responsivo que se adapta a todos los dispositivos.",
         github: "https://github.com/LucasUr11/C3-Content-Command-Center",
-        demo: "#",
+        demo: "https://c3-content-command-center.vercel.app/",
         images: [C3_1, C3_2, C3_3, C3_4]
     }
 
