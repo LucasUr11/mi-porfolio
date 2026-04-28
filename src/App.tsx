@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Form from "./components/Form";
+import ProjectsProcess from "./components/ProjectsProcess";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <main className="bg-black">
             <Hero />
             <Projects />
+            <ProjectsProcess />
             <About />
             <Contact />
           </main>
