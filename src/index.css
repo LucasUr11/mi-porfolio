@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300..700&display=swap');
+
 @theme {
-  /* Aquí puedes agregar tus variables de tema si las necesitas luego */
+  --font-heading: "Inter", sans-serif;
+  --font-accent: "Cormorant Garamond", serif;
 }
 
-/* El reseteo global ya lo hace Tailwind por defecto con Preflight, 
-pero si quieres ser extra específico: */
 @layer base {
   * {
     box-sizing: border-box;
