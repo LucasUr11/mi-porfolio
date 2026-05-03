@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="h-screen flex items-center justify-center text-white px-4 relative overflow-hidden bg-black"
+      className="h-screen flex justify-center pt-36 text-white px-4 relative overflow-hidden bg-black"
     >
 
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -20,9 +20,8 @@ const Hero = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-5xl w-full z-20 flex flex-col items-center gap-12"
+        className="text-center max-w-5xl w-full z-20 flex flex-col items-center"
       >
-
         <div className="flex flex-col items-center w-full">
           {/* Textos.- */}
           <motion.h1
@@ -34,7 +33,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="font-accent text-2xl md:text-3xl italic font-light text-gray-300 tracking-wide my-4"
+            className="font-accent text-2xl md:text-3xl italic font-light text-gray-300 tracking-wide my-2"
           >
             Lucas Urquiza
           </motion.p>
@@ -44,7 +43,6 @@ const Hero = () => {
              rounded-2xl border border-white/10 
              backdrop-blur-md overflow-hidden group "
           >
-            <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             <p className="relative z-10 text-gray-300 text-base md:text-lg leading-relaxed font-light">
               Diseñador Web enfocado en crear interfaces
@@ -57,8 +55,8 @@ const Hero = () => {
           {/* Contenedor de Botones.- */}
           <div className="flex flex-wrap justify-center gap-6 mt-2">
 
-            <Link
-              to="#projects"
+            <a
+              href="#projects"
               className="group relative inline-flex items-center justify-center p-px font-semibold text-white bg-neutral-900 shadow-2xl rounded-2xl shadow-purple-900/20 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-purple-500/40 cursor-pointer overflow-hidden"
             >
               <span className="absolute inset-0 rounded-2xl bg-linear-to-r from-purple-400 to-blue-500 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
@@ -69,9 +67,8 @@ const Hero = () => {
                   <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
                 </svg>
               </span>
-            </Link>
+            </a>
 
-            {/* Botón Contacto (React Router Link) */}
             <Link
               to="/contacto"
               className="group relative inline-flex items-center justify-center p-px font-semibold text-white bg-neutral-900 shadow-2xl rounded-2xl shadow-purple-900/20 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-purple-500/40 cursor-pointer overflow-hidden"
@@ -93,21 +90,20 @@ const Hero = () => {
       </motion.div>
 
       <div
-        className="absolute top-120 left-1/2 -translate-x-1/2 pointer-events-none z-10 
-                   w-[300%] md:w-[200%] h-87.5 md:h-100 
-                   bg-neutral-950 rounded-[100%] 
-                   border-t border-white/10 overflow-hidden"
+        className="absolute top-130 left-1/2 -translate-x-1/2 pointer-events-none z-10 
+             w-[150%] md:w-[120%] aspect-2/1
+             bg-neutral-950 rounded-t-full
+             border-t border-white/10 overflow-hidden"
         style={{
           backgroundImage: 'radial-gradient(circle at 50% -20%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0) 60%)',
           boxShadow: '0 -20px 80px -20px rgba(168, 85, 247, 0.4)',
         }}
       >
-        <div className="relative z-20 flex flex-col items-center justify-start pt-50 md:pt-24 w-full h-full">
-
-          <div className="pt-15 w-full max-w-[100vw] overflow-hidden mask-[linear-to-r(from-transparent_via-black_to-transparent)]">
+        <div className="relative z-20 flex flex-col items-center justify-start pt-16 w-full h-full">
+          <div className="pt-10 w-full max-w-[80%] overflow-hidden mask-[linear-to-r(from-transparent_via-black_to-transparent)]">
             <TechCarousel />
           </div>
-        </div>
+        </div> 
       </div>
 
     </div>

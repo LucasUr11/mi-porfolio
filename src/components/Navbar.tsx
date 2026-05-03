@@ -21,7 +21,6 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "Inicio", href: "/" },
         { name: "Proyectos", href: "/#projects" },
         { name: "Sobre mi", href: "/#about" },
         { name: "Contacto", href: "/#contact" },
@@ -34,14 +33,13 @@ export default function Navbar() {
                 : "py-6 bg-transparent"
                 }`}
         >
-            <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-                {/* Logo */}
+            <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
+                    className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
                 >
-                    LU.
+                    <a href="/">LU.-</a>
                 </motion.div>
 
                 {/* Desktop Menu - Visible solo en md en adelante */}
