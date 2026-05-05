@@ -7,15 +7,8 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="h-screen flex justify-center pt-36 text-white px-4 relative overflow-hidden bg-black"
+      className="min-h-screen flex flex-col items-center justify-center pt-36 px-4 relative"
     >
-
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute -top-[15%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-600/10 blur-[150px]" />
-        <div className="absolute -bottom-[15%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-600/10 blur-[150px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[30%] rounded-full bg-white/5 blur-[100px]" />
-      </div>
-
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -90,20 +83,18 @@ const Hero = () => {
       </motion.div>
 
       <div
-        className="absolute top-130 left-1/2 -translate-x-1/2 pointer-events-none z-10 
-             w-[150%] md:w-[120%] aspect-2/1
-             bg-neutral-950 rounded-t-full
-             border-t border-white/10 overflow-hidden"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 50% -20%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0) 60%)',
-          boxShadow: '0 -20px 80px -20px rgba(168, 85, 247, 0.4)',
-        }}
+        className="absolute -bottom-20 left-1/2 -translate-x-1/2 pointer-events-none z-10 w-[160%] md:w-[130%] aspect-2/1 text-white"
       >
-        <div className="relative z-20 flex flex-col items-center justify-start pt-16 w-full h-full">
-          <div className="pt-10 w-full max-w-[80%] overflow-hidden mask-[linear-to-r(from-transparent_via-black_to-transparent)]">
+        <div
+          className="relative z-20 flex flex-col items-center justify-start pt-16 md:pt-24 w-full h-full"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 50% 100%, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
+          }}
+        >
+          <div className="w-full mt-24 py-10">
             <TechCarousel />
           </div>
-        </div> 
+        </div>
       </div>
 
     </div>

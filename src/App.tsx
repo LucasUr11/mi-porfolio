@@ -6,14 +6,19 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Form from "./components/Form";
 import ProjectsProcess from "./components/ProjectsProcess";
+import GlobalBackground from "./components/GlobalBackground";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={
-          <main className="bg-black">
+          <main className="relative min-h-screen w-full">
+            <GlobalBackground />
+
             <Hero />
             <Projects />
             <ProjectsProcess />
