@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Form from "./components/Form";
-import ProjectsProcess from "./components/ProjectsProcess";
-import GlobalBackground from "./components/GlobalBackground";
-import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./components/layout/Navbar";
+import Hero from "./pages/Hero";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import ContactForm from "./components/sections/Form";
+import ProjectsProcess from "./pages/ProjectsProcess";
+import GlobalBackground from "./components/shared/GlobalBackground";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         {/* Ruta de Contacto */}
         <Route path="/contacto" element={
           <div className="min-h-screen bg-black flex items-center justify-center p-6">
-            <Form />
+            <ContactForm />
           </div>
         } />
       </Routes>

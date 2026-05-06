@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function contact() {
+export default function Contact() {
   return (
     <footer
       id="contact"
-      className="bg-black text-white pt-20">
-      {/* SECCIÓN DE CONTACTO */}
+      className="text-white pt-20"
+    >
       <div className="max-w-6xl mx-auto px-6 pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

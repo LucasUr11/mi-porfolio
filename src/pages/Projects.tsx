@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import ProjectModal from "./ProjectModal"
-import FadeIn from "./FadeIn"
-import { projects, type Project } from "../constants/ProjectData";
+import ProjectModal from "../components/modals/ProjectModal"
+import FadeIn from "../components/ui/FadeIn"
+import { projects, type Project } from "../types/ProjectData";
 const Projects = () => {
 
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -10,11 +10,10 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="relative py-24 bg-black"
+            className="relative py-24"
         >
             <FadeIn>
                 <div className="flex flex-col items-center text-center mb-16 relative z-10">
-                    <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black pointer-events-none" />
                     <h2 className="text-4xl h-14 md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500">
                         Proyectos
                     </h2>
@@ -30,7 +29,6 @@ const Projects = () => {
                 </div>
             </FadeIn>
 
-            {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto relative z-10">
 
                 {projects.map((project) => (
@@ -126,9 +124,7 @@ const Projects = () => {
                     />
                 )}
             </AnimatePresence>
-
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(168,85,247,0.12),transparent_60%)] pointer-events-none"></div>
-
+            
         </section>
     )
 }

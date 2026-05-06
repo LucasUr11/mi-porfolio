@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ImageCarousel from "../store/ImageCarousel";
+import ImageCarousel from "../../store/ImageCarousel";
 import { useEffect } from "react";
 
 // Define esto fuera de tu componente para poder reutilizarlo

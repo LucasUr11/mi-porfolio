@@ -5,7 +5,6 @@ import {
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 import { Link } from "react-router-dom";  
 
-// 1. Integramos TODOS tus iconos para eliminar los warnings
 const techs = [
   { icon: <FaReact />, name: "React" },
   { icon: <SiTypescript />, name: "TypeScript" },
@@ -17,7 +16,6 @@ const techs = [
   { icon: <FaGithub />, name: "GitHub" },
 ];
 
-// 2. Traemos tu metodología de Workflow.tsx
 const steps = [
   { num: "01", title: "Analizar", desc: "Entiendo el problema y los objetivos." },
   { num: "02", title: "Planificar", desc: "Defino estructura, componentes y arquitectura." },
@@ -29,10 +27,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-black text-white overflow-hidden">
+      className="py-24 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Título con animación de entrada */}
         <div className="overflow-hidden mb-16">
           <motion.h2
             initial={{ y: "100%" }}

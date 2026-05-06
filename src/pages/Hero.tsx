@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
-import TechCarousel from "../ui/TechCarousel";
+import TechCarousel from "../components/ui/TechCarousel";
 
 const Hero = () => {
 
@@ -82,19 +82,8 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <div
-        className="absolute -bottom-20 left-1/2 -translate-x-1/2 pointer-events-none z-10 w-[160%] md:w-[130%] aspect-2/1 text-white"
-      >
-        <div
-          className="relative z-20 flex flex-col items-center justify-start pt-16 md:pt-24 w-full h-full"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 100%, rgba(168, 85, 247, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
-          }}
-        >
-          <div className="w-full mt-24 py-10">
-            <TechCarousel />
-          </div>
-        </div>
+      <div className="max-w-3/4 mt-24 py-10">
+        <TechCarousel />
       </div>
 
     </div>

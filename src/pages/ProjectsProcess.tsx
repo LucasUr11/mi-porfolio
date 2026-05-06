@@ -1,22 +1,22 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import ProjectModal from "./ProjectModal"
-import FadeIn from "./FadeIn"
-import { projectsProcess, type Project } from "../constants/ProjectData";
+import ProjectModal from "../components/modals/ProjectModal"
+import FadeIn from "../components/ui/FadeIn";
+import { projectsProcess, type Project } from "../types/ProjectData";
 
 const ProjectsProcess = () => {
 
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
-        <section className="relative py-12 bg-black">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,rgba(168,85,247,0.12),transparent_60%)] pointer-events-none"></div>
-
+        <section
+            className="relative py-24"
+        >
             <FadeIn>
                 <div className="flex flex-col items-center text-center mb-16 relative z-10">
-                    <h4 className="text-2xl h-14 md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500">
+                    <h2 className="text-4xl h-14 md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500">
                         Proyectos en Proceso
-                    </h4>
+                    </h2>
 
                     <motion.div
                         initial={{ width: 0 }}
