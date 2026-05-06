@@ -3,7 +3,8 @@ import {
   FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaGithub
 } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
+import FadeIn from "../components/ui/FadeIn";
 
 const techs = [
   { icon: <FaReact />, name: "React" },
@@ -30,32 +31,31 @@ export default function About() {
       className="py-24 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
 
-        <div className="overflow-hidden mb-16">
-          <motion.h2
-            initial={{ y: "100%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }} // Ease de salida suave
-            className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
-          >
-            Sobre mí
+        <FadeIn>
+          <div className="overflow-hidden mb-16">
+            <motion.h2
+              initial={{ y: "100%" }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }} // Ease de salida suave
+              className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
+            >
+              Sobre mí
+            </motion.h2>
 
-          </motion.h2>
-
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "250px" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-            className="h-1 bg-linear-to-r from-purple-400 to-blue-500 mt-4"
-            style={{ originX: 0 }} // Establece el inicio en la izquierda
-          ></motion.div>
-
-        </div>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "250px" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+              className="h-1 bg-linear-to-r from-purple-400 to-blue-500 mt-4"
+              style={{ originX: 0 }}
+            ></motion.div>
+          </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-          {/* BLOQUE PRINCIPAL: Bio + Workflow */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

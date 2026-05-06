@@ -8,6 +8,7 @@ import ContactForm from "./components/sections/Form";
 import ProjectsProcess from "./pages/ProjectsProcess";
 import GlobalBackground from "./components/shared/GlobalBackground";
 import ScrollToTop from "./components/layout/ScrollToTop";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           </div>
         } />
       </Routes>
+      <Footer />
     </Router>
   );
 }

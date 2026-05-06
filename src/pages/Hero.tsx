@@ -19,8 +19,7 @@ const Hero = () => {
           {/* Textos.- */}
           <motion.h1
             className="font-heading font-extrabold text-5xl md:text-7xl tracking-tight py-2
-             bg-clip-text text-transparent 
-             bg-linear-to-r from-purple-400 via-white to-blue-500"
+             bg-clip-text text-transparent bg-linear-to-r from-purple-400 via-white to-blue-500"
           >
             Web Designer
           </motion.h1>

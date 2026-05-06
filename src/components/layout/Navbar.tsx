@@ -36,7 +36,7 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
+                    className="px-10 text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-500"
                 >
                     <a href="/">LU.-</a>
                 </motion.div>
